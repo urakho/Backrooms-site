@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Архив Закулисья</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="topbar" aria-label="Главная навигация">
+        <a class="brand" href="#top" aria-label="Архив Закулисья">Архив Закулисья</a>
+        <div class="nav-links">
+          <a href="#archive">Каталог</a>
+        </div>
+      </nav>
+
+      <section class="hero-content">
+        <p class="kicker">Полевая база Б.И.Г.</p>
+        <h1>Проект: «Закулисье»</h1>
+        <p class="lead">
+         Если не проявить достаточной осторожности и выпасть из реальности, то можно оказаться в Закулисье, где не будет ничего, кроме затхлого запаха ветхого ковра, безумия желтых обоев, бесконечного невыносимого шума люминесцентных ламп, а также 600 миллионов квадратных миль случайным образом совмещённых пустых комнат. Упаси вас Господь услышать, как что-то бродит рядом, ведь это самое что-то уже наверняка о вас знает…
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#archive">Открыть каталог</a>
+        </div>
+      </section>
+
+      <aside class="signal-panel" aria-label="Сводка архива">
+        <div>
+          <span>30</span>
+          <small>статей</small>
+        </div>
+        <div>
+          <span>3</span>
+          <small>раздела</small>
+        </div>
+        <div>
+          <span>0-10</span>
+          <small>первые записи</small>
+        </div>
+      </aside>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <p class="section-label">Навигация</p>
+          <h2>Каталог работает как архив</h2>
+        </div>
+        <p>
+          Выбирай раздел, вводи название или тег, открывай карточку и переходи
+          на отдельную страницу статьи. Текст оформлен как полевой документ: краткая сводка,
+          классификация, описание и полевые заметки.
+        </p>
+      </section>
+
+      <section class="archive-shell" id="archive">
+        <div class="controls" role="search">
+          <div class="tabs" aria-label="Категории архива">
+            <button class="tab active" type="button" data-filter="levels">Уровни</button>
+            <button class="tab" type="button" data-filter="entities">Сущности</button>
+            <button class="tab" type="button" data-filter="objects">Объекты</button>
+          </div>
+          <label class="search">
+            <span>Поиск по архиву</span>
+            <input id="searchInput" type="search" placeholder="Улыбающиеся, Уровень 4, Миндальная вода..." />
+          </label>
+        </div>
+
+        <div class="archive-meta">
+          <p id="categoryTitle">Уровни 0-9</p>
+          <span id="resultCount">10 записей</span>
+        </div>
+
+        <div class="grid" id="cards" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Архив Закулисья</span>
+      <a href="#top">Вернуться наверх</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
