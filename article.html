@@ -28,6 +28,10 @@
       <small class="license-note">«Часть материалов взяты с Wikidot, Fandom, сайта Закулиста и распространяются по лицензии CC-BY-SA 3.0»</small>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      const script = document.createElement("script");
+      script.src = `script.js?v=${Date.now()}`;
+      document.body.appendChild(script);
+    </script>
   </body>
 </html>

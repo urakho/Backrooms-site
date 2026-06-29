@@ -28,7 +28,7 @@
 
       <aside class="signal-panel" aria-label="Сводка архива">
         <div>
-          <span>35</span>
+          <span>41</span>
           <small>статей</small>
         </div>
         <div>
@@ -36,7 +36,7 @@
           <small>раздела</small>
         </div>
         <div>
-          <span>0-14</span>
+          <span>0-15</span>
           <small>первые записи</small>
         </div>
       </aside>
@@ -62,15 +62,16 @@
             <button class="tab" type="button" data-filter="entities">Сущности</button>
             <button class="tab" type="button" data-filter="objects">Объекты</button>
           </div>
-          <label class="search">
-            <span>Поиск по архиву</span>
-            <input id="searchInput" type="search" placeholder="Улыбающиеся, Уровень 4, Миндальная вода..." />
-          </label>
+          <div class="level-subsections" id="levelSubsections" aria-label="Подразделы уровней">
+            <button class="subsection-tab" type="button" data-level-section="negative">Отрицательные Уровни</button>
+            <button class="subsection-tab active" type="button" data-level-section="normal">Обычные Уровни</button>
+            <button class="subsection-tab" type="button" data-level-section="enigmatic">Загадочные Уровни</button>
+          </div>
         </div>
 
         <div class="archive-meta">
-          <p id="categoryTitle">Уровни 0-14</p>
-          <span id="resultCount">15 записей</span>
+          <p id="categoryTitle">Уровни 0-15</p>
+          <span id="resultCount">16 записей</span>
         </div>
 
         <div class="grid" id="cards" aria-live="polite"></div>
@@ -84,6 +85,10 @@
       <small class="license-note">«Собственные материалы этого сайта также распространяются по лицензии CC-BY-SA 3.0»</small>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      const script = document.createElement("script");
+      script.src = `script.js?v=${Date.now()}`;
+      document.body.appendChild(script);
+    </script>
   </body>
 </html>
